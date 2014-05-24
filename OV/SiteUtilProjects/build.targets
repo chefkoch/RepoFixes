@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <Target Name="AfterBuild">
+
+    <!-- Define site util assembly to be copied -->
+    <ItemGroup>
+      <PluginFiles Include="$(TargetDir)$(ProjectName).*" />
+    </ItemGroup>
+
+    <!-- copy to MP install dir -->
+    <Copy SourceFiles="@(PluginFiles)"
+          Condition="$(CopyToMP1) == 'true'"
+          DestinationFolder="$(MSBuildExtensionsPath32)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\" />
+
+    <!-- copy to MP1 package dir -->
+    <Copy SourceFiles="@(PluginFiles)"
+          Condition="$(SolutionName) == 'OnlineVideos.MediaPortal1'"
+          DestinationFolder="$(SolutionDir)\bin\$(SolutionName)\MPbase\plugins\Windows\OnlineVideos\" />
+
+    <!-- copy to MP2 package dir is not required, as it is downloaded via site update -->
+
+  </Target>
+</Project>
