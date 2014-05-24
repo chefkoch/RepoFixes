@@ -2,30 +2,34 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
 
   <Target Name="BeforeBuild">
-    <Exec Command='subwcrev "$(SolutionDir)." "$(ProjectDir)Properties\VersionInfo.cs.tmpl" "$(ProjectDir)Properties\VersionInfo.cs"'/>
+    <Exec Command='subwcrev "$(SolutionDir)." "$(ProjectDir)Properties\VersionInfo.cs.tmpl" "$(ProjectDir)Properties\VersionInfo.cs"'
+          Condition="$(CallSubwcrev) != 'false'"/>
   </Target>
 
   <PropertyGroup>
     <PluginDestination>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\</PluginDestination>
     <DataDestination>$(ProgramData)\Team MediaPortal\MediaPortal\</DataDestination>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PluginFiles Include="$(TargetDir)$(ProjectName).*" />
-    <APIFiles Include="$(TargetDir)OnlineVideos.dll" />
-    <APIFiles Include="$(TargetDir)OnlineVideos.pdb" Condition=" '$(Configuration)' == 'Debug' "/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <LanguageFiles Include="$(SolutionDir)Language\OnlineVideos\*.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <SkinFiles Include="$(SolutionDir)Skins\**\*.*" />
-    <IconFiles Include="$(SolutionDir)SiteImages\**\*.*" />
-  </ItemGroup>
+  <PropertyGroup Condition="$(BuildPackageOnly) == 'true'">
+    <PluginDestination>$(SolutionDir)\bin\$(SolutionName)\MPbase\plugins\Windows\</PluginDestination>
+    <DataDestination>$(SolutionDir)\bin\$(SolutionName)\MPdata\</DataDestination>
+  </PropertyGroup>
 
   <Target Name="AfterBuild">
+
+    <ItemGroup>
+      <PluginFiles Include="$(TargetDir)$(ProjectName).*" />
+
+      <APIFiles Include="$(TargetDir)OnlineVideos.dll" />
+      <APIFiles Include="$(TargetDir)OnlineVideos.pdb" Condition=" '$(Configuration)' == 'Debug' "/>
+
+      <LanguageFiles Include="$(SolutionDir)Language\OnlineVideos\*.xml" />
+
+      <SkinFiles Include="$(SolutionDir)Skins\**\*.*" />
+
+      <IconFiles Include="$(SolutionDir)SiteImages\**\*.*" />
+    </ItemGroup>
+  
     <Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(PluginDestination)" />
     <Copy SourceFiles="@(APIFiles)" DestinationFolder="$(PluginDestination)OnlineVideos\" />
     <Copy SourceFiles="@(LanguageFiles)" DestinationFolder="$(DataDestination)language\OnlineVideos\" />
