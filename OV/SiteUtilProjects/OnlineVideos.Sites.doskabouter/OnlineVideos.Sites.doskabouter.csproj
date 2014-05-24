@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D43B3A93-FDF8-4B5C-8BD0-714FBBF9AF31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos.Sites</RootNamespace>
+    <AssemblyName>OnlineVideos.Sites.doskabouter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SubtitleDownloader">
+      <HintPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\SubtitleDownloader.dll</HintPath>
+      <Private>False</Private>
+      <Aliases>MySubtitleDownloader</Aliases>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABCiViewUtil.cs" />
+    <Compile Include="BigPondVideoUtil.cs" />
+    <Compile Include="BrassBandTubeUtil.cs" />
+    <Compile Include="CollegeHumorUtil.cs" />
+    <Compile Include="DeferredResolveUtil.cs" />
+    <Compile Include="DeRedactieUtil.cs" />
+    <Compile Include="DrieVoor12Util.cs" />
+    <Compile Include="EuroSportUtil.cs" />
+    <Compile Include="EventCasterUtil.cs" />
+    <Compile Include="FilmonUtil.cs" />
+    <Compile Include="Hoster\Archiv.cs" />
+    <Compile Include="Hoster\EcoStream.cs" />
+    <Compile Include="Hoster\OvFile.cs" />
+    <Compile Include="Hoster\SockShare.cs" />
+    <Compile Include="Hoster\DataUp.cs" />
+    <Compile Include="Hoster\DivxDen.cs" />
+    <Compile Include="Hoster\DivxStage.cs" />
+    <Compile Include="Hoster\Duckload.cs" />
+    <Compile Include="Hoster\Freeload.cs" />
+    <Compile Include="Hoster\GorillaVid.cs" />
+    <Compile Include="Hoster\Loaded.cs" />
+    <Compile Include="Hoster\Loombo.cs" />
+    <Compile Include="Hoster\MegaVideo.cs" />
+    <Compile Include="Hoster\MovShare.cs" />
+    <Compile Include="Hoster\MyStream.cs" />
+    <Compile Include="Hoster\MyVideo.cs" />
+    <Compile Include="Hoster\NovaMov.cs" />
+    <Compile Include="Hoster\PutLocker.cs" />
+    <Compile Include="Hoster\Quickload.cs" />
+    <Compile Include="Hoster\ShareHoster.cs" />
+    <Compile Include="Hoster\Speedload.cs" />
+    <Compile Include="Hoster\Tubeload.cs" />
+    <Compile Include="Hoster\Veoh.cs" />
+    <Compile Include="Hoster\Viddler.cs" />
+    <Compile Include="Hoster\VideoBB.cs" />
+    <Compile Include="Hoster\VideoWeed.cs" />
+    <Compile Include="Hoster\Vimeo.cs" />
+    <Compile Include="Hoster\MyHosterBase.cs" />
+    <Compile Include="Hoster\Xtream.cs" />
+    <Compile Include="iLiveToUtil.cs" />
+    <Compile Include="IplaUtil.cs" />
+    <Compile Include="Katsomo.cs" />
+    <Compile Include="KhanAcademyUtil.cs" />
+    <Compile Include="KijkUtil.cs" />
+    <Compile Include="LeagueOfLegendsUtil.cs" />
+    <Compile Include="MuzuTV.cs" />
+    <Compile Include="NickelodeonNLUtil.cs" />
+    <Compile Include="NicoNicoUtil.cs" />
+    <Compile Include="PowerUnlimitedUtil.cs" />
+    <Compile Include="RedBull.cs" />
+    <Compile Include="RockPalastUtil.cs" />
+    <Compile Include="RTEPlayerUtil.cs" />
+    <Compile Include="RtmpUtil.cs" />
+    <Compile Include="RuutuUtil.cs" />
+    <Compile Include="SBSauUtil.cs" />
+    <Compile Include="SubtitleHandler.cs" />
+    <Compile Include="TelegraafTVUtil.cs" />
+    <Compile Include="ToonsTv.cs" />
+    <Compile Include="TubePlusUtil.cs" />
+    <Compile Include="TV3NZOnDemandUtil.cs" />
+    <Compile Include="TVLinkscc.cs" />
+    <Compile Include="TVNPlayerUtil.cs" />
+    <Compile Include="TweakersNetUtil.cs" />
+    <Compile Include="UitzendingGemistUtil.cs" />
+    <Compile Include="VimeoUtil.cs" />
+    <Compile Include="Vimeo\AuthBase.cs" />
+    <Compile Include="VodTvpUtil.cs" />
+    <Compile Include="YleAreenaUtil.cs" />
+    <Compile Include="ZieNlUtil.cs" />
+    <Compile Include="CinemassacreUtil.cs" />
+    <Compile Include="MyHosters.cs" />
+    <Compile Include="NOSUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RTLXLUtil.cs" />
+    <Compile Include="SesameStreetUtil.cs" />
+    <Compile Include="SouthParkUtil.cs" />
+    <Compile Include="ThatGuyWithTheGlassesUtil.cs" />
+    <Compile Include="TheEscapistUtil.cs" />
+    <Compile Include="TVEUtil.cs" />
+    <Compile Include="TVNZOnDemandUtil.cs" />
+    <Compile Include="WatchSeriesUtil.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OnlineVideos\OnlineVideos.csproj">
+      <Project>{E0D9D390-CDD6-4B98-86F3-6EB04A958882}</Project>
+      <Name>OnlineVideos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\VersionInfo.cs.tmpl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>subwcrev "$(SolutionDir)." "$(ProjectDir)Properties\VersionInfo.cs.tmpl" "$(ProjectDir)Properties\VersionInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D05B2288-6732-4211-9931-29C8511DC32F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos.Sites.apondman</RootNamespace>
+    <AssemblyName>OnlineVideos.Sites.apondman</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'MP11|AnyCPU'">
+    <OutputPath>bin\MP11\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\OnlineVideos.Sites.apondman.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseUtil.cs" />
+    <Compile Include="Cache\DataObjectCache.cs" />
+    <Compile Include="Cache\DataObjectExtensions.cs" />
+    <Compile Include="Cache\DataObjectManager.cs" />
+    <Compile Include="IMDbUtil.Config.cs">
+      <DependentUpon>IMDbUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMDbUtil.cs" />
+    <Compile Include="IMDb\DTO\Model.cs" />
+    <Compile Include="IMDb\Json\IMDbBoxOfficeTitle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbCash.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbCertificate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbNameListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbPhoto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbPlot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbPrincipal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbRankedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbResults.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbRole.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbRuntime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbStaff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbTitle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbTitleDetails.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbTitleListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbTitleMobile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbTrailer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbVideo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMDb\Json\IMDbVideoFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITunes\Enumerations.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IMDb\IMDbAPI.cs" />
+    <Compile Include="IMDb\Model\Certificate.cs" />
+    <Compile Include="IMDb\Model\Character.cs" />
+    <Compile Include="IMDb\Model\Enumerations.cs" />
+    <Compile Include="IMDb\Model\Extensions.cs" />
+    <Compile Include="IMDb\Model\NameDetails.cs" />
+    <Compile Include="IMDb\Model\NameReference.cs" />
+    <Compile Include="IMDb\Model\Reference.cs" />
+    <Compile Include="IMDb\Model\SearchResults.cs" />
+    <Compile Include="IMDb\Model\TitleBase.cs" />
+    <Compile Include="IMDb\Model\TitleDetails.cs" />
+    <Compile Include="IMDb\Model\TitleReference.cs" />
+    <Compile Include="IMDb\Model\VideoDetails.cs" />
+    <Compile Include="IMDb\Model\VideoReference.cs" />
+    <Compile Include="IMDb\Session.cs" />
+    <Compile Include="IMDb\Settings.cs" />
+    <Compile Include="Interfaces\IDataObject.cs" />
+    <Compile Include="Interfaces\IExternalContentNode.cs" />
+    <Compile Include="Interfaces\ISession.cs" />
+    <Compile Include="Interfaces\ISessionSettings.cs" />
+    <Compile Include="ITMTUtil.Config.cs">
+      <DependentUpon>ITMTUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ITMTUtil.cs" />
+    <Compile Include="ITunes\API.cs" />
+    <Compile Include="ITunes\Configuration.cs" />
+    <Compile Include="ITunes\DTO\MovieDTO.cs" />
+    <Compile Include="ITunes\DTO\VideoDTO.cs" />
+    <Compile Include="ITunes\Extensions.cs" />
+    <Compile Include="ITunes\Nodes\Movie.cs" />
+    <Compile Include="ITunes\Nodes\Poster.cs" />
+    <Compile Include="ITunes\Nodes\Section.cs" />
+    <Compile Include="ITunes\Nodes\Video.cs" />
+    <Compile Include="ITunes\Session.cs" />
+    <Compile Include="Nodes\Enumerations.cs" />
+    <Compile Include="Nodes\ExternalContentNodeBase.cs" />
+    <Compile Include="Nodes\ExternalContentNodeCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OnlineVideos\OnlineVideos.csproj">
+      <Project>{E0D9D390-CDD6-4B98-86F3-6EB04A958882}</Project>
+      <Name>OnlineVideos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

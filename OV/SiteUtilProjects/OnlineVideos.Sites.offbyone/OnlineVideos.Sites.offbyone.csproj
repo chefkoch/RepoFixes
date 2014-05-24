@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{022D3A7F-676E-4741-95D3-6E5D0223BFE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineVideos.Sites</RootNamespace>
+    <AssemblyName>OnlineVideos.Sites.offbyone</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DailyMotionUtil.cs" />
+    <Compile Include="DasErsteMediathekUtil.cs" />
+    <Compile Include="FilmStartsUtil.cs" />
+    <Compile Include="Google\GData\Client\abstractentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\abstractfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\appcontrol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\asyncDataHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\asyncservice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atombase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atombaselink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomcategory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomcontent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomfeedentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomFeedgenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomfeedparser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomicon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomlink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomlogo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomnametable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomperson.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomsource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomtextconstruct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\atomuri.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\authentication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\authexceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\authsubutil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\basefeedparser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\basenametable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\batcherror.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\batcherrors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\collections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\documentquery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\exceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\extcollections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\extensionbase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\feedconstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\feedmodel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\feedquery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\gauthrequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\gauthsubrequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\gdatabatch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\goauth2request.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\goauthrequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\HttpUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\logrequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\mediaservice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\mediasource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\oauthbase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\oauthparameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\oauthuri.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\oauthutil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\request.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\resumableupload.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\rssfeedparser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\service.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\serviceinterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\simplecontainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\simpleelement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\tracing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\utilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\versioninterface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Client\xmlextension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\apps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\comments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\contacts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\entrylink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\enumconstruct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\exif.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\extended.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\feedlink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\gdatanametable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\georsswhere.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\labelcollection.cs" />
+    <Compile Include="Google\GData\Extensions\mailitempropertycollection.cs" />
+    <Compile Include="Google\GData\Extensions\mediarss.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\misc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\originalevent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\ratings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\recurexception.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\recurrence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\reminder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\when.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\where.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\Extensions\who.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\activitiesfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\activityentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\commententry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\commentsfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\complaintentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\friendsentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\friendsfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\messageentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\messagefeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\playlistentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\playlistfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\playlistsentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\playlistsfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\profileentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\profilefeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\showentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\showfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\showseasonentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\showseasonfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\subscriptionentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\subscriptionfeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtubebaseentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtubeentry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtubeextensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtubefeed.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtubequery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtuberequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Google\GData\YouTube\youtubeservice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HeiseVideoUtil.cs" />
+    <Compile Include="Hoster\Youtube.cs" />
+    <Compile Include="Hoster\LiveVideo.cs" />
+    <Compile Include="KinoDeUtil.cs" />
+    <Compile Include="MetaCafeUtil.cs" />
+    <Compile Include="MsnbcUtil.cs" />
+    <Compile Include="MtvMusicVideosUtil.cs" />
+    <Compile Include="MyVideoUtil.cs" />
+    <Compile Include="NbaUtil.cs" />
+    <Compile Include="NrkBrowserUtil.cs" />
+    <Compile Include="NrkBrowser\Domain\AutogeneratedMenuItem.cs" />
+    <Compile Include="NrkBrowser\Domain\Category.cs" />
+    <Compile Include="NrkBrowser\Domain\Clip.cs" />
+    <Compile Include="NrkBrowser\Domain\Folder.cs" />
+    <Compile Include="NrkBrowser\Domain\ILog.cs" />
+    <Compile Include="NrkBrowser\Domain\Item.cs" />
+    <Compile Include="NrkBrowser\Domain\NullLogger.cs" />
+    <Compile Include="NrkBrowser\Domain\PodKast.cs" />
+    <Compile Include="NrkBrowser\Domain\Program.cs" />
+    <Compile Include="NrkBrowser\Domain\SearchItem.cs" />
+    <Compile Include="NrkBrowser\Domain\Stream.cs" />
+    <Compile Include="NrkBrowser\ITranslationService.cs" />
+    <Compile Include="NrkBrowser\NrkBrowserConstants.cs" />
+    <Compile Include="NrkBrowser\NrkTranslatableStrings.cs" />
+    <Compile Include="NrkBrowser\Parser\HttpClient.cs" />
+    <Compile Include="NrkBrowser\Parser\IHttpClient.cs" />
+    <Compile Include="NrkBrowser\Parser\NrkBetaXmlParser.cs" />
+    <Compile Include="NrkBrowser\Parser\NrkParser.cs" />
+    <Compile Include="NrkBrowser\Parser\NrkParserConstants.cs" />
+    <Compile Include="NrkBrowser\Parser\NrkUtils.cs" />
+    <Compile Include="NrkBrowser\Parser\PodkastXmlParser.cs" />
+    <Compile Include="NrkBrowser\Parser\Search.cs" />
+    <Compile Include="NrkBrowser\Parser\XmlKlippParser.cs" />
+    <Compile Include="NrkBrowser\Parser\XmlParser.cs" />
+    <Compile Include="NrkBrowser\Parser\XmlRSSParser.cs" />
+    <Compile Include="NrkBrowser\TranslationService.cs" />
+    <Compile Include="OnTVRuUtil.cs" />
+    <Compile Include="PervyjKanalRuUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="rbbUtil.cs" />
+    <Compile Include="TEDTalksUtil.cs" />
+    <Compile Include="Tube8Util.cs" />
+    <Compile Include="TwitchTV.cs" />
+    <Compile Include="VidiLifeUtil.cs" />
+    <Compile Include="WDRUtil.cs" />
+    <Compile Include="YouTubeUtil.cs" />
+    <Compile Include="ZDFMediathekUtil.cs" />
+    <Compile Include="ZDF\ConfigurationHelper.cs" />
+    <Compile Include="ZDF\DTO\channellist.cs" />
+    <Compile Include="ZDF\DTO\channellistChannel.cs" />
+    <Compile Include="ZDF\DTO\channellistChannelInitialLetter.cs" />
+    <Compile Include="ZDF\DTO\configuration.cs" />
+    <Compile Include="ZDF\DTO\context.cs" />
+    <Compile Include="ZDF\DTO\details.cs" />
+    <Compile Include="ZDF\DTO\detailsFsk.cs" />
+    <Compile Include="ZDF\DTO\feedlist.cs" />
+    <Compile Include="ZDF\DTO\imageseries.cs" />
+    <Compile Include="ZDF\DTO\imageseriesAudio.cs" />
+    <Compile Include="ZDF\DTO\imageseriesImage.cs" />
+    <Compile Include="ZDF\DTO\information.cs" />
+    <Compile Include="ZDF\DTO\interactive.cs" />
+    <Compile Include="ZDF\DTO\ItemChoiceType.cs" />
+    <Compile Include="ZDF\DTO\ivwUrls.cs" />
+    <Compile Include="ZDF\DTO\mainnavigation.cs" />
+    <Compile Include="ZDF\DTO\mainnavigationMainnaviitem.cs" />
+    <Compile Include="ZDF\DTO\mainnavigationMainnaviitemKey.cs" />
+    <Compile Include="ZDF\DTO\misc.cs" />
+    <Compile Include="ZDF\DTO\page.cs" />
+    <Compile Include="ZDF\DTO\pagePageElement.cs" />
+    <Compile Include="ZDF\DTO\podcast.cs" />
+    <Compile Include="ZDF\DTO\podcastUrl.cs" />
+    <Compile Include="ZDF\DTO\podcastUrlKey.cs" />
+    <Compile Include="ZDF\DTO\response.cs" />
+    <Compile Include="ZDF\DTO\skindetails.cs" />
+    <Compile Include="ZDF\DTO\status.cs" />
+    <Compile Include="ZDF\DTO\statusStatuscode.cs" />
+    <Compile Include="ZDF\DTO\suggestlist.cs" />
+    <Compile Include="ZDF\DTO\teaser.cs" />
+    <Compile Include="ZDF\DTO\teaserimages.cs" />
+    <Compile Include="ZDF\DTO\teaserimagesTeaserimage.cs" />
+    <Compile Include="ZDF\DTO\teaserlist.cs" />
+    <Compile Include="ZDF\DTO\teaserlistSearchResult.cs" />
+    <Compile Include="ZDF\DTO\teaserlistSearchResultBroadcast.cs" />
+    <Compile Include="ZDF\DTO\teaserlistSearchResultCategory.cs" />
+    <Compile Include="ZDF\DTO\teaserlistSearchResultProperty.cs" />
+    <Compile Include="ZDF\DTO\teaserlistSearchResultStation.cs" />
+    <Compile Include="ZDF\DTO\teaserlistSearchResultType.cs" />
+    <Compile Include="ZDF\DTO\teaserMember.cs" />
+    <Compile Include="ZDF\DTO\type.cs" />
+    <Compile Include="ZDF\DTO\value.cs" />
+    <Compile Include="ZDF\DTO\video.cs" />
+    <Compile Include="ZDF\DTO\videoCaption.cs" />
+    <Compile Include="ZDF\DTO\videoFormitaet.cs" />
+    <Compile Include="ZDF\DTO\videoFormitaetQuality.cs" />
+    <Compile Include="ZDF\DTO\videoLiveChat.cs" />
+    <Compile Include="ZDF\DTO\videoMoreInfos.cs" />
+    <Compile Include="ZDF\RestAgent.cs" />
+    <Compile Include="ZDF\ServiceException.cs" />
+    <Compile Include="ZDF\ServiceExceptionType.cs" />
+    <Compile Include="ZDF\Teaser.cs" />
+    <Compile Include="ZDF\TeaserListChoiceType.cs" />
+    <Compile Include="ZDF\Update.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OnlineVideos\OnlineVideos.csproj">
+      <Project>{E0D9D390-CDD6-4B98-86F3-6EB04A958882}</Project>
+      <Name>OnlineVideos</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NrkBrowser\en-US.xml" />
+    <EmbeddedResource Include="NrkBrowser\no.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\VersionInfo.cs.tmpl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>subwcrev "$(SolutionDir)." "$(ProjectDir)Properties\VersionInfo.cs.tmpl" "$(ProjectDir)Properties\VersionInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
