@@ -8,17 +8,9 @@
       <PluginFiles Include="$(TargetDir)$(ProjectName).*" />
     </ItemGroup>
 
-    <!-- copy to MP install dir -->
+    <!-- copy to package dir -->
     <Copy SourceFiles="@(PluginFiles)"
-          Condition="$(CopyToMP1) == 'true'"
-          DestinationFolder="$(MSBuildExtensionsPath32)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\" />
-
-    <!-- copy to MP1 package dir -->
-    <Copy SourceFiles="@(PluginFiles)"
-          Condition="$(SolutionName) == 'OnlineVideos.MediaPortal1'"
-          DestinationFolder="$(SolutionDir)\bin\$(SolutionName)\MPbase\plugins\Windows\OnlineVideos\" />
-
-    <!-- copy to MP2 package dir is not required, as it is downloaded via site update -->
+          DestinationFolder="$(SolutionDir)\bin\SiteUtils\" />
 
   </Target>
 </Project>
