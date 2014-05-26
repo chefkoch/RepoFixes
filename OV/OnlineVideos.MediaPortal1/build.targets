@@ -2,6 +2,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
 
   <Target Name="BeforeBuild">
+    <!-- Ensure package output dir is cleaned before starting the build -->
+    <RemoveDir Directories="$(SolutionDir)\bin\$(SolutionName)" />
+
+    <!-- Write SVN Revision info -->
     <Exec Command='subwcrev "$(SolutionDir)." "$(ProjectDir)Properties\VersionInfo.cs.tmpl" "$(ProjectDir)Properties\VersionInfo.cs"'
           Condition="$(CallSubwcrev) != 'false'"/>
   </Target>
