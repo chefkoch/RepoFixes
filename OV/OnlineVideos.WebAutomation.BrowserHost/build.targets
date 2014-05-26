@@ -5,21 +5,4 @@
     <Exec Command='subwcrev "$(SolutionDir)." "$(ProjectDir)Properties\VersionInfo.cs.tmpl" "$(ProjectDir)Properties\VersionInfo.cs"'/>
   </Target>
 
-
-  <PropertyGroup>
-    <ExeDestination>$(ProgramFiles)\Team MediaPortal\MediaPortal\plugins\Windows\OnlineVideos\</ExeDestination>
-  </PropertyGroup>
-  <PropertyGroup Condition="$(BuildPackageOnly) == 'true'">
-    <ExeDestination>$(SolutionDir)\bin\$(SolutionName)\MPbase\plugins\Windows\OnlineVideos\</ExeDestination>
-  </PropertyGroup>
-
-  <Target Name="AfterBuild">
-
-    <ItemGroup>
-      <Files Include="$(TargetPath)" />
-      <Files Include="$(TargetPath).config" />
-    </ItemGroup>
-  
-    <Copy SourceFiles="@(Files)" DestinationFolder="$(ExeDestination)" />
-  </Target>
 </Project>
