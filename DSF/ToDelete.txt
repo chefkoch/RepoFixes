@@ -1,0 +1,5 @@
+remove
+^
+DirectShowFilters\baseclasses\baseclasses.sln
+DirectShowFilters\baseclasses\BaseClasses.vcxproj.user
+DirectShowFilters\DirectShowHelper\dshowhelper.sln
